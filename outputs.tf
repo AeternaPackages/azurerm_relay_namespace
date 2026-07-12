@@ -1,4 +1,9 @@
 # --- azurerm_relay_namespace ---
+output "relay_namespaces_id" {
+  description = "Map of id values across all relay_namespaces, keyed the same as var.relay_namespaces"
+  value       = module.relay_namespaces.relay_namespaces_id
+}
+
 output "relay_namespaces_location" {
   description = "Map of location values across all relay_namespaces, keyed the same as var.relay_namespaces"
   value       = module.relay_namespaces.relay_namespaces_location
@@ -54,6 +59,11 @@ output "relay_namespaces_tags" {
 }
 
 # --- azurerm_relay_hybrid_connection ---
+output "relay_hybrid_connections_id" {
+  description = "Map of id values across all relay_hybrid_connections, keyed the same as var.relay_hybrid_connections"
+  value       = module.relay_hybrid_connections.relay_hybrid_connections_id
+}
+
 output "relay_hybrid_connections_name" {
   description = "Map of name values across all relay_hybrid_connections, keyed the same as var.relay_hybrid_connections"
   value       = module.relay_hybrid_connections.relay_hybrid_connections_name
