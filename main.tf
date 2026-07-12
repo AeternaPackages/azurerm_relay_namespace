@@ -5,7 +5,7 @@ locals {
     for k1, v1 in var.relay_namespaces : {
       for k2, v2 in coalesce(v1.relay_hybrid_connections, {}) :
       "${k1}/${k2}" => merge(v2, {
-        relay_namespace_name = module.relay_namespaces.relay_namespaces["${k1}"].name
+        relay_namespace_name = module.relay_namespaces.relay_namespaces_name["${k1}"]
       })
     }
   ]...)
