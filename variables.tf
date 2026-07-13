@@ -26,7 +26,7 @@ EOT
     relay_hybrid_connections = optional(map(object({
       name                          = string
       resource_group_name           = string
-      requires_client_authorization = optional(bool) # Default: true
+      requires_client_authorization = optional(bool)
       user_metadata                 = optional(string)
     })))
   }))
